@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KESA Hotel Onboarding Guide</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --brand: #2563eb;
+      --brand-soft: #eff6ff;
+      --title: #111827;
+      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb 55%, #60a5fa);
+      color: white;
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      max-width: 780px;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px;
+      box-shadow: var(--shadow);
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .lang-toggle button.active {
+      background: var(--brand);
+      color: white;
+    }
+
+    .intro,
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .intro {
+      padding: 22px 22px;
+      margin-bottom: 24px;
+    }
+
+    .intro h2 {
+      margin: 0 0 10px;
+      color: var(--title);
+      font-size: 22px;
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      padding: 22px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .num {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--title);
+      line-height: 1.3;
+    }
+
+    .section {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin-top: 12px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+
+    .section p,
+    .section ul {
+      margin: 0;
+    }
+
+    .section ul {
+      padding-left: 18px;
+    }
+
+    .section li + li {
+      margin-top: 6px;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+      }
+
+      .wrap {
+        padding: 20px 14px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="lang-toggle" aria-label="Language toggle">
+        <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+        <button id="btn-zh" onclick="setLang('zh')">繁體中文</button>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="content-en" class="lang active">
+      <section class="hero">
+        <h1>KESA Hotel Onboarding Guide</h1>
+        <p>
+          This page explains what guests should understand when they first discover KESA at the hotel.
+          Each point shows both the key message and why it matters.
+        </p>
+      </section>
+
+      <section class="intro">
+        <h2>What guests should learn first</h2>
+        <p>
+          KESA should feel simple, complimentary, hotel-supported, and easy to access.
+          The goal is to make guests understand how to start, what to expect, and what to do if they need help.
+        </p>
+      </section>
+
+      <div class="grid">
+        <section class="card">
+          <div class="card-header">
+            <div class="num">1</div>
+            <h3>Your KESA account is prepared by the hotel</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              Guests do not need to create a KESA account themselves. The hotel staff prepares the account for the stay.
+              If access does not work, guests should ask hotel staff to check the account details.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This removes setup friction and makes KESA feel like a hotel service, not a separate platform.
+              It also reassures guests that support is available if they cannot log in.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">2</div>
+            <h3>KESA is complimentary</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              KESA is free to use. There is no payment required, no app download, no credit card input, and no separate registration process.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This lowers hesitation. Guests can feel safe trying KESA because there is no cost, no commitment, and no hidden setup barrier.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">3</div>
+            <h3>Login is based on your stay details</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              Logging in is simple. Guests use their check-in date, surname, and room number to access KESA.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This makes the process feel direct and hotel-linked. Guests understand that KESA is connected to their stay, not a separate account system they need to set up from scratch.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">4</div>
+            <h3>If login does not work, check whose name the booking is under</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              Sometimes the KESA access may be registered under the surname of the person who booked the room, not the person currently trying to log in.
+              If unsure, guests should check with the front desk.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This prevents unnecessary confusion and failed login attempts. It is one of the most practical explanations guests need during first use.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">5</div>
+            <h3>Access KESA by scanning the QR code or tapping the NFC in the room</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              Guests can enter KESA by scanning the in-room QR code or tapping the NFC point in the room.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This makes first access immediate and easy. It also reinforces that KESA is built into the hotel stay experience.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">6</div>
+            <h3>Save your access for later</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              After logging in, guests should bookmark the page or take a photo of the QR code so they can return to KESA quickly during the stay.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This improves repeat access and reduces the chance that guests forget how to get back in after the first visit.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">7</div>
+            <h3>KESA remains available until midnight after checkout</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              Guests can continue using KESA until 12:00 midnight on the day they check out.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This gives guests a clear usage window and adds flexibility. It also encourages guests to keep using KESA on checkout day instead of assuming access ends immediately.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">8</div>
+            <h3>If you need help, ask the hotel staff</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">What guests should know</div>
+            <p>
+              If guests have trouble accessing KESA, do not know which surname to use, or are unsure whether the account is active, they should ask the front desk or hotel staff for help.
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">Why it matters</div>
+            <p>
+              This turns a possible frustration point into a service moment and helps guests feel supported throughout the experience.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <p class="footer-note">
+        Suggested use: hotel onboarding page, KOL education sheet, in-room QR landing page, or guest welcome guide.
+      </p>
+    </div>
+
+    <!-- Traditional Chinese -->
+    <div id="content-zh" class="lang">
+      <section class="hero">
+        <h1>KESA 酒店入住教學重點</h1>
+        <p>
+          呢一頁整理咗住客第一次喺酒店接觸 KESA 時，最應該知道的資訊。
+          每一點都會清楚講明重點內容，同埋點解重要。
+        </p>
+      </section>
+
+      <section class="intro">
+        <h2>住客第一時間應該了解的事</h2>
+        <p>
+          KESA 應該畀住客一種簡單、免費、由酒店支援，而且容易使用的感覺。
+          重點係令住客清楚知道點樣開始、會遇到咩情況，以及有需要時可以搵邊個幫手。
+        </p>
+      </section>
+
+      <div class="grid">
+        <section class="card">
+          <div class="card-header">
+            <div class="num">1</div>
+            <h3>你的 KESA 帳戶已由酒店預先準備</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              住客唔需要自己建立 KESA 帳戶。酒店職員會為今次入住預先準備帳戶。
+              如果無法登入或進入 KESA，應該直接請酒店職員協助檢查帳戶資料。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點可以大大減少使用門檻，令 KESA 感覺上係酒店服務的一部分，而唔係一個要自己另外處理的平台。
+              同時亦令住客知道，遇到問題時酒店可以提供協助。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">2</div>
+            <h3>KESA 是完全免費使用的</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              KESA 屬於免費體驗，唔需要付款、唔需要下載 App、唔需要輸入信用卡資料，亦唔需要另外註冊。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點可以減低住客的戒心，令佢哋更願意即刻試用。住客會知道使用 KESA 冇成本、冇壓力、冇隱藏程序。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">3</div>
+            <h3>登入方式以入住資料為主</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              登入 KESA 的方式好簡單，住客只需要輸入入住日期、姓氏同房號即可登入。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點令整個流程更直接，亦清楚表達 KESA 係同今次酒店住宿綁定的服務，而唔係一個要重新建立新帳戶的系統。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">4</div>
+            <h3>如果登入唔到，先確認預訂是用邊個姓名登記</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              有時 KESA 的帳戶資料可能係登記喺訂房者的姓氏之下，而唔一定係當前使用者本人。
+              如果唔肯定，應該向前台查詢。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點可以避免住客因為用錯姓氏而一直登入失敗。呢個係非常實際、而且最容易出現的使用疑問之一。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">5</div>
+            <h3>可透過房內 QR Code 或 NFC 進入 KESA</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              住客可以掃描房內的 QR Code，或者拍一拍房內的 NFC 位置，直接進入 KESA。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢種進入方式夠直接、夠方便，亦令 KESA 更自然地成為酒店入住體驗的一部分。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">6</div>
+            <h3>記得保存進入方式，方便之後再次開啟</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              成功登入後，建議將頁面加入書籤，或者拍低 QR Code，方便入住期間隨時再打開 KESA。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢個小動作可以提升之後再次使用的便利度，減少住客第一次登入後唔記得點樣返回平台的情況。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">7</div>
+            <h3>KESA 可使用至退房當日午夜 12 點</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              住客喺退房之後，仍然可以繼續使用 KESA，直到退房當日午夜 12:00 為止。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點令住客清楚知道使用期限，亦增加彈性，避免住客誤以為一退房就即時失效。
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="num">8</div>
+            <h3>如有問題，直接向酒店職員查詢</h3>
+          </div>
+          <div class="section">
+            <div class="section-label">住客應該知道</div>
+            <p>
+              如果住客無法登入、唔清楚應該輸入邊個姓氏，或者唔確定帳戶是否已啟用，都應該直接向前台或酒店職員查詢。
+            </p>
+          </div>
+          <div class="section">
+            <div class="section-label">點解重要</div>
+            <p>
+              呢點可以將本來可能變成挫折的情況，轉化成酒店服務的一部分，令住客感受到支援同安心。
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <p class="footer-note">
+        建議用途：酒店入住教學頁、KOL 教育資料、房內 QR landing page、住客 welcome guide。
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const en = document.getElementById('content-en');
+      const zh = document.getElementById('content-zh');
+      const btnEn = document.getElementById('btn-en');
+      const btnZh = document.getElementById('btn-zh');
+
+      if (lang === 'zh') {
+        en.classList.remove('active');
+        zh.classList.add('active');
+        btnEn.classList.remove('active');
+        btnZh.classList.add('active');
+        document.documentElement.lang = 'zh-Hant';
+      } else {
+        zh.classList.remove('active');
+        en.classList.add('active');
+        btnZh.classList.remove('active');
+        btnEn.classList.add('active');
+        document.documentElement.lang = 'en';
+      }
+    }
+  </script>
+</body>
+</html>
