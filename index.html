@@ -16,6 +16,7 @@
       --title: #111827;
       --shadow: 0 10px 30px rgba(0,0,0,0.06);
       --radius: 18px;
+      --scene: #f9fafb;
     }
 
     * { box-sizing: border-box; }
@@ -169,6 +170,11 @@
       margin-top: 12px;
     }
 
+    .section.scene {
+      background: var(--scene);
+      border-left: 4px solid var(--brand);
+    }
+
     .section-label {
       display: inline-block;
       font-size: 12px;
@@ -181,6 +187,17 @@
 
     .section p {
       margin: 0;
+    }
+
+    .scene .quote {
+      display: block;
+      margin-top: 8px;
+      padding: 10px 12px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-style: italic;
+      color: var(--title);
     }
 
     .footer-note {
@@ -215,7 +232,7 @@
         <h1>KESA Hotel Onboarding Guide</h1>
         <p>
           This page explains what guests should understand when they first discover KESA at the hotel.
-          It includes both a quick summary checklist and detailed explanations for each point.
+          It includes a quick summary, detailed explanations, and role-play examples to help content creators bring each point to life.
         </p>
       </section>
 
@@ -251,17 +268,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              Guests do not need to create a KESA account themselves. The hotel staff prepares the account for the stay.
-              If access does not work, guests should ask hotel staff to check the account details.
-            </p>
+            <p>Guests do not need to create a KESA account themselves. The hotel staff prepares the account for the stay. If access does not work, guests should ask hotel staff to check the account details.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This removes setup friction and makes KESA feel like a hotel service, not a separate platform.
-              It also reassures guests that support is available if they cannot log in.
-            </p>
+            <p>This removes setup friction and makes KESA feel like a hotel service, not a separate platform. It also reassures guests that support is available if they cannot log in.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest checking in and asking whether they need to sign up.</p>
+            <span class="quote">“So I don’t need to create an account myself? The hotel already prepared it for me.”</span>
           </div>
         </section>
 
@@ -272,15 +288,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              KESA is free to use. There is no payment required, no app download, no credit card input, and no separate registration process.
-            </p>
+            <p>KESA is free to use. There is no payment required, no app download, no credit card input, and no separate registration process.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This lowers hesitation. Guests can feel safe trying KESA because there is no cost, no commitment, and no hidden setup barrier.
-            </p>
+            <p>This lowers hesitation. Guests can feel safe trying KESA because there is no cost, no commitment, and no hidden setup barrier.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest opening KESA and reacting with surprise that nothing extra is needed.</p>
+            <span class="quote">“I thought I’d need to download something or pay first, but actually it’s completely complimentary.”</span>
           </div>
         </section>
 
@@ -291,15 +308,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              Logging in is simple. Guests use their check-in date, surname, and room number to access KESA.
-            </p>
+            <p>Logging in is simple. Guests use their check-in date, surname, and room number to access KESA.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This makes the process feel direct and hotel-linked. Guests understand that KESA is connected to their stay, not a separate account system they need to set up from scratch.
-            </p>
+            <p>This makes the process feel direct and hotel-linked. Guests understand that KESA is connected to their stay, not a separate account system they need to set up from scratch.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the login page and let the guest walk through the fields on screen.</p>
+            <span class="quote">“It’s actually really easy — just check-in date, surname, and room number.”</span>
           </div>
         </section>
 
@@ -310,16 +328,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              Sometimes the KESA access may be registered under the surname of the person who booked the room, not the person currently trying to log in.
-              If unsure, guests should check with the front desk.
-            </p>
+            <p>Sometimes the KESA access may be registered under the surname of the person who booked the room, not the person currently trying to log in. If unsure, guests should check with the front desk.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This prevents unnecessary confusion and failed login attempts. It is one of the most practical explanations guests need during first use.
-            </p>
+            <p>This prevents unnecessary confusion and failed login attempts. It is one of the most practical explanations guests need during first use.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show a failed login first, then the guest realizes the room was booked under a friend’s name.</p>
+            <span class="quote">“Oh, maybe it’s under my friend’s surname because she booked the room. Let me check with the front desk.”</span>
           </div>
         </section>
 
@@ -330,15 +348,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              Guests can enter KESA by scanning the in-room QR code or tapping the NFC point in the room.
-            </p>
+            <p>Guests can enter KESA by scanning the in-room QR code or tapping the NFC point in the room.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This makes first access immediate and easy. It also reinforces that KESA is built into the hotel stay experience.
-            </p>
+            <p>This makes first access immediate and easy. It also reinforces that KESA is built into the hotel stay experience.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest entering the room, spotting the QR code or NFC, and trying it immediately.</p>
+            <span class="quote">“This is the easiest way in — just scan the QR code or tap the NFC here.”</span>
           </div>
         </section>
 
@@ -349,15 +368,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              After logging in, guests should bookmark the page or take a photo of the QR code so they can return to KESA quickly during the stay.
-            </p>
+            <p>After logging in, guests should bookmark the page or take a photo of the QR code so they can return to KESA quickly during the stay.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This improves repeat access and reduces the chance that guests forget how to get back in after the first visit.
-            </p>
+            <p>This improves repeat access and reduces the chance that guests forget how to get back in after the first visit.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest bookmarking the page right away.</p>
+            <span class="quote">“I’m bookmarking this now because I know I’ll want to jump back in later.”</span>
           </div>
         </section>
 
@@ -368,15 +388,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              Guests can continue using KESA until 12:00 midnight on the day they check out.
-            </p>
+            <p>Guests can continue using KESA until 12:00 midnight on the day they check out.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This gives guests a clear usage window and adds flexibility. It also encourages guests to keep using KESA on checkout day instead of assuming access ends immediately.
-            </p>
+            <p>This gives guests a clear usage window and adds flexibility. It also encourages guests to keep using KESA on checkout day instead of assuming access ends immediately.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest on checkout day realizing they still have time to use KESA.</p>
+            <span class="quote">“Good thing this still works until midnight after checkout — I still have time to use it today.”</span>
           </div>
         </section>
 
@@ -387,15 +408,16 @@
           </div>
           <div class="section">
             <div class="section-label">What guests should know</div>
-            <p>
-              If guests have trouble accessing KESA, do not know which surname to use, or are unsure whether the account is active, they should ask the front desk or hotel staff for help.
-            </p>
+            <p>If guests have trouble accessing KESA, do not know which surname to use, or are unsure whether the account is active, they should ask the front desk or hotel staff for help.</p>
           </div>
           <div class="section">
             <div class="section-label">Why it matters</div>
-            <p>
-              This turns a possible frustration point into a service moment and helps guests feel supported throughout the experience.
-            </p>
+            <p>This turns a possible frustration point into a service moment and helps guests feel supported throughout the experience.</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">Suggested scene / role play</div>
+            <p>Show the guest walking back to the front desk for a quick clarification.</p>
+            <span class="quote">“If you’re not sure what name it’s under or why it’s not working, just ask the front desk — they can help you check.”</span>
           </div>
         </section>
       </div>
@@ -411,7 +433,7 @@
         <h1>KESA 酒店入住教學重點</h1>
         <p>
           呢一頁整理咗住客第一次喺酒店接觸 KESA 時，最應該知道的資訊。
-          內容包括快速重點清單，以及每一點的詳細解釋。
+          內容包括快速重點、詳細解釋，以及可用於內容創作的情景示範。
         </p>
       </section>
 
@@ -447,17 +469,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              住客唔需要自己建立 KESA 帳戶。酒店職員會為今次入住預先準備帳戶。
-              如果無法登入或進入 KESA，應該直接請酒店職員協助檢查帳戶資料。
-            </p>
+            <p>住客唔需要自己建立 KESA 帳戶。酒店職員會為今次入住預先準備帳戶。如果無法登入或進入 KESA，應該直接請酒店職員協助檢查帳戶資料。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點可以大大減少使用門檻，令 KESA 感覺上係酒店服務的一部分，而唔係一個要自己另外處理的平台。
-              同時亦令住客知道，遇到問題時酒店可以提供協助。
-            </p>
+            <p>呢點可以大大減少使用門檻，令 KESA 感覺上係酒店服務的一部分，而唔係一個要自己另外處理的平台。同時亦令住客知道，遇到問題時酒店可以提供協助。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 喺前台 check-in 時，順便問需唔需要自己註冊。</p>
+            <span class="quote">「即係我唔需要自己開帳戶？原來酒店已經幫我準備好。」</span>
           </div>
         </section>
 
@@ -468,15 +489,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              KESA 屬於免費體驗，唔需要付款、唔需要下載 App、唔需要輸入信用卡資料，亦唔需要另外註冊。
-            </p>
+            <p>KESA 屬於免費體驗，唔需要付款、唔需要下載 App、唔需要輸入信用卡資料，亦唔需要另外註冊。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點可以減低住客的戒心，令佢哋更願意即刻試用。住客會知道使用 KESA 冇成本、冇壓力、冇隱藏程序。
-            </p>
+            <p>呢點可以減低住客的戒心，令佢哋更願意即刻試用。住客會知道使用 KESA 冇成本、冇壓力、冇隱藏程序。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 打開 KESA 時，以為要下載或付款，之後發現原來完全唔使。</p>
+            <span class="quote">「我本身以為要先 download 或付款，點知原來完全免費。」</span>
           </div>
         </section>
 
@@ -487,15 +509,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              登入 KESA 的方式好簡單，住客只需要輸入入住日期、姓氏同房號即可登入。
-            </p>
+            <p>登入 KESA 的方式好簡單，住客只需要輸入入住日期、姓氏同房號即可登入。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點令整個流程更直接，亦清楚表達 KESA 係同今次酒店住宿綁定的服務，而唔係一個要重新建立新帳戶的系統。
-            </p>
+            <p>呢點令整個流程更直接，亦清楚表達 KESA 係同今次酒店住宿綁定的服務，而唔係一個要重新建立新帳戶的系統。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以直接展示登入頁面，逐格講解輸入內容。</p>
+            <span class="quote">「其實登入好簡單，只係輸入入住日期、姓氏同房號。」</span>
           </div>
         </section>
 
@@ -506,16 +529,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              有時 KESA 的帳戶資料可能係登記喺訂房者的姓氏之下，而唔一定係當前使用者本人。
-              如果唔肯定，應該向前台查詢。
-            </p>
+            <p>有時 KESA 的帳戶資料可能係登記喺訂房者的姓氏之下，而唔一定係當前使用者本人。如果唔肯定，應該向前台查詢。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點可以避免住客因為用錯姓氏而一直登入失敗。呢個係非常實際、而且最容易出現的使用疑問之一。
-            </p>
+            <p>呢點可以避免住客因為用錯姓氏而一直登入失敗。呢個係非常實際、而且最容易出現的使用疑問之一。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以先拍登入失敗，再發現原來房間係朋友訂的。</p>
+            <span class="quote">「啊，可能係用咗我朋友個姓氏訂房，所以帳戶資料喺佢名下，我去前台 check 一check。」</span>
           </div>
         </section>
 
@@ -526,15 +549,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              住客可以掃描房內的 QR Code，或者拍一拍房內的 NFC 位置，直接進入 KESA。
-            </p>
+            <p>住客可以掃描房內的 QR Code，或者拍一拍房內的 NFC 位置，直接進入 KESA。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢種進入方式夠直接、夠方便，亦令 KESA 更自然地成為酒店入住體驗的一部分。
-            </p>
+            <p>呢種進入方式夠直接、夠方便，亦令 KESA 更自然地成為酒店入住體驗的一部分。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 入房後即刻見到 QR Code 或 NFC，然後即場試用。</p>
+            <span class="quote">「最方便就係直接掃房內個 QR Code，或者拍一拍 NFC 就入到去。」</span>
           </div>
         </section>
 
@@ -545,15 +569,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              成功登入後，建議將頁面加入書籤，或者拍低 QR Code，方便入住期間隨時再打開 KESA。
-            </p>
+            <p>成功登入後，建議將頁面加入書籤，或者拍低 QR Code，方便入住期間隨時再打開 KESA。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢個小動作可以提升之後再次使用的便利度，減少住客第一次登入後唔記得點樣返回平台的情況。
-            </p>
+            <p>呢個小動作可以提升之後再次使用的便利度，減少住客第一次登入後唔記得點樣返回平台的情況。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 登入成功後即刻加書籤。</p>
+            <span class="quote">「我而家即刻 bookmark 低，之後想再入就方便好多。」</span>
           </div>
         </section>
 
@@ -564,15 +589,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              住客喺退房之後，仍然可以繼續使用 KESA，直到退房當日午夜 12:00 為止。
-            </p>
+            <p>住客喺退房之後，仍然可以繼續使用 KESA，直到退房當日午夜 12:00 為止。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點令住客清楚知道使用期限，亦增加彈性，避免住客誤以為一退房就即時失效。
-            </p>
+            <p>呢點令住客清楚知道使用期限，亦增加彈性，避免住客誤以為一退房就即時失效。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 退房當日仍然打開 KESA，發現仲用到。</p>
+            <span class="quote">「好彩，原來退房之後到午夜 12 點前都仲可以用。」</span>
           </div>
         </section>
 
@@ -583,15 +609,16 @@
           </div>
           <div class="section">
             <div class="section-label">住客應該知道</div>
-            <p>
-              如果住客無法登入、唔清楚應該輸入邊個姓氏，或者唔確定帳戶是否已啟用，都應該直接向前台或酒店職員查詢。
-            </p>
+            <p>如果住客無法登入、唔清楚應該輸入邊個姓氏，或者唔確定帳戶是否已啟用，都應該直接向前台或酒店職員查詢。</p>
           </div>
           <div class="section">
             <div class="section-label">點解重要</div>
-            <p>
-              呢點可以將本來可能變成挫折的情況，轉化成酒店服務的一部分，令住客感受到支援同安心。
-            </p>
+            <p>呢點可以將本來可能變成挫折的情況，轉化成酒店服務的一部分，令住客感受到支援同安心。</p>
+          </div>
+          <div class="section scene">
+            <div class="section-label">建議情景 / 示範方式</div>
+            <p>可以拍 KOL 走去前台問一問，然後快速解決登入問題。</p>
+            <span class="quote">「如果唔肯定係用邊個名登記，或者登入唔到，直接問前台就得。」</span>
           </div>
         </section>
       </div>
