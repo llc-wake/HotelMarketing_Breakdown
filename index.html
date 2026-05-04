@@ -18,9 +18,7 @@
       --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -51,7 +49,7 @@
       border-radius: 24px;
       padding: 28px 24px;
       box-shadow: var(--shadow);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .hero h1 {
@@ -92,6 +90,7 @@
     }
 
     .intro,
+    .summary,
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -99,12 +98,14 @@
       box-shadow: var(--shadow);
     }
 
-    .intro {
-      padding: 22px 22px;
-      margin-bottom: 24px;
+    .intro,
+    .summary {
+      padding: 22px;
+      margin-bottom: 22px;
     }
 
-    .intro h2 {
+    .intro h2,
+    .summary h2 {
       margin: 0 0 10px;
       color: var(--title);
       font-size: 22px;
@@ -113,6 +114,15 @@
     .intro p {
       margin: 0;
       color: var(--muted);
+    }
+
+    .summary ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .summary li + li {
+      margin-top: 8px;
     }
 
     .grid {
@@ -169,17 +179,8 @@
       margin-bottom: 6px;
     }
 
-    .section p,
-    .section ul {
+    .section p {
       margin: 0;
-    }
-
-    .section ul {
-      padding-left: 18px;
-    }
-
-    .section li + li {
-      margin-top: 6px;
     }
 
     .footer-note {
@@ -189,26 +190,13 @@
       text-align: center;
     }
 
-    .lang {
-      display: none;
-    }
-
-    .lang.active {
-      display: block;
-    }
+    .lang { display: none; }
+    .lang.active { display: block; }
 
     @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 26px;
-      }
-
-      .card h3 {
-        font-size: 20px;
-      }
-
-      .wrap {
-        padding: 20px 14px 40px;
-      }
+      .hero h1 { font-size: 26px; }
+      .card h3 { font-size: 20px; }
+      .wrap { padding: 20px 14px 40px; }
     }
   </style>
 </head>
@@ -227,12 +215,28 @@
         <h1>KESA Hotel Onboarding Guide</h1>
         <p>
           This page explains what guests should understand when they first discover KESA at the hotel.
-          Each point shows both the key message and why it matters.
+          It includes both a quick summary checklist and detailed explanations for each point.
         </p>
       </section>
 
+      <section class="summary">
+        <h2>KESA: What Guests Should Learn First at the Hotel</h2>
+        <ul>
+          <li>KESA access is already prepared by the hotel</li>
+          <li>Guests do not need to create an account themselves</li>
+          <li>KESA is complimentary</li>
+          <li>There is no download, no payment, and no separate registration</li>
+          <li>Guests can log in using check-in date, surname, and room number</li>
+          <li>If login fails, the account may be under the booker’s name</li>
+          <li>Guests can ask the front desk to check access details</li>
+          <li>The easiest way to enter is by scanning the QR code or tapping the NFC in the room</li>
+          <li>Guests should bookmark the page or save the QR code</li>
+          <li>KESA remains available until midnight after checkout</li>
+        </ul>
+      </section>
+
       <section class="intro">
-        <h2>What guests should learn first</h2>
+        <h2>Why this matters</h2>
         <p>
           KESA should feel simple, complimentary, hotel-supported, and easy to access.
           The goal is to make guests understand how to start, what to expect, and what to do if they need help.
@@ -407,12 +411,28 @@
         <h1>KESA 酒店入住教學重點</h1>
         <p>
           呢一頁整理咗住客第一次喺酒店接觸 KESA 時，最應該知道的資訊。
-          每一點都會清楚講明重點內容，同埋點解重要。
+          內容包括快速重點清單，以及每一點的詳細解釋。
         </p>
       </section>
 
+      <section class="summary">
+        <h2>KESA：住客在酒店第一時間應該知道的事</h2>
+        <ul>
+          <li>KESA 使用權限已由酒店預先準備</li>
+          <li>住客唔需要自行建立帳戶</li>
+          <li>KESA 是免費使用的</li>
+          <li>不需要下載、不需要付款、也不需要另外註冊</li>
+          <li>住客可使用入住日期、姓氏及房號登入</li>
+          <li>如果登入失敗，帳戶可能是登記在訂房者名下</li>
+          <li>住客可以請前台協助查核登入資料</li>
+          <li>最方便的進入方式是掃描房內 QR Code 或拍一拍 NFC</li>
+          <li>住客應該將頁面加入書籤或保存 QR Code</li>
+          <li>KESA 可使用至退房當日午夜 12 點</li>
+        </ul>
+      </section>
+
       <section class="intro">
-        <h2>住客第一時間應該了解的事</h2>
+        <h2>點解呢啲資訊重要</h2>
         <p>
           KESA 應該畀住客一種簡單、免費、由酒店支援，而且容易使用的感覺。
           重點係令住客清楚知道點樣開始、會遇到咩情況，以及有需要時可以搵邊個幫手。
